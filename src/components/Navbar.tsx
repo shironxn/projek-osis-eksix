@@ -50,7 +50,6 @@ function Navbar() {
             <Link href={item.url} className="btn btn-ghost normal-case text-lg">
               {item.title}
             </Link>
-            ;
           </ul>
         ))}
       </div>

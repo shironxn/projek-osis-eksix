@@ -7,27 +7,27 @@ import { Carousel } from "flowbite-react";
 const imagesGaleri = [
   {
     id: 1,
-    img: "http://localhost:3000/galeri/1.jpg",
+    img: "/galeri/1.jpg",
   },
   {
     id: 2,
-    img: "http://localhost:3000/galeri/2.jpg",
+    img: "/galeri/2.jpg",
   },
   {
     id: 3,
-    img: "http://localhost:3000/galeri/3.jpeg",
+    img: "/galeri/3.jpeg",
   },
   {
     id: 4,
-    img: "http://localhost:3000/galeri/4.jpeg",
+    img: "/galeri/4.jpeg",
   },
   {
     id: 5,
-    img: "http://localhost:3000/galeri/5.jpeg",
+    img: "/galeri/5.jpeg",
   },
   {
     id: 6,
-    img: "http://localhost:3000/galeri/6.jpeg",
+    img: "/galeri/6.jpeg",
   },
 ];
 
