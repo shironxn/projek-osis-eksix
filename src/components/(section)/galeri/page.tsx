@@ -34,7 +34,7 @@ const imagesGaleri = [
 const imagesNews = [
   {
     id: 1,
-    img: "/news/news-1",
+    img: "/news/news-1.jpeg",
   },
 ];
 
