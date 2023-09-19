@@ -9,7 +9,7 @@ function Aspirasi() {
   const [tpasData, setTpasData] = useState<dataTPAS[]>([]);
 
   const fetchData = async () => {
-    const response = await axios.get("http://localhost:3000/api/tpas");
+    const response = await axios.get("/api/tpas");
     const tpasArray = Object.keys(response.data.data).map((key) => ({
       id: key,
       ...response.data.data[key],
@@ -28,7 +28,7 @@ function Aspirasi() {
 
     try {
       const response: AxiosResponse<any, any> = await axios.post(
-        "http://localhost:3000/api/tpas",
+        "/api/tpas",
         requestData
       );
     } catch (error) {

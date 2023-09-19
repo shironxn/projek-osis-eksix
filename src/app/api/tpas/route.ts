@@ -2,7 +2,6 @@ import TPAS from "@/models/tpas.model";
 import dataTPAS from "@/types/tpas.type";
 import { validateDataTPAS } from "@/utils/validation";
 import { NextRequest, NextResponse } from "next/server";
-import NextCors from "nextjs-cors";
 
 export async function POST(request: NextRequest) {
   try {
