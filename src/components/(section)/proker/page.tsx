@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const proker = [
   {
@@ -49,7 +50,7 @@ function Proker() {
 
                 <label
                   htmlFor={item.title}
-                  className="btn hover:bg-light/30 bg-main text-dark hover:scale-110"
+                  className="btn btn-ghost hover:bg-yellow-500 bg-main text-dark hover:scale-110"
                 >
                   Details
                 </label>
@@ -73,9 +74,9 @@ function Proker() {
                       {item.id === 1 && (
                         <label
                           htmlFor={item.title}
-                          className="btn bg-main text-dark hover:bg-yellow-400 hover:scale-110"
+                          className="btn bg-main text-dark hover:bg-yellow-500 hover:scale-110"
                         >
-                          TPAS
+                          <Link href={"/tpas"}>TPAS</Link>
                         </label>
                       )}
                     </div>

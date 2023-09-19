@@ -42,7 +42,7 @@ function Navbar() {
       <div className="flex-1">
         <Link
           href={"/"}
-          className="btn btn-ghost hover:scale-110 hover:bg-light/30 normal-case text-xl"
+          className="btn btn-ghost hover:scale-110 hover:bg-light/30 text-xl"
         >
           EKSIX
         </Link>
@@ -52,7 +52,7 @@ function Navbar() {
           <ul className="menu menu-horizontal px-1" key={item.id}>
             <Link
               href={item.url}
-              className="btn btn-ghost normal-case text-lg hover:scale-110 hover:bg-light/30"
+              className="btn btn-ghost text-xl hover:scale-110 hover:bg-light/30"
             >
               {item.title}
             </Link>
