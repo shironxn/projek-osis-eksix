@@ -39,13 +39,16 @@ function Navbar() {
   }, []);
 
   const navbarClasses = isNavbarBlurred
-    ? "navbar fixed bg-dark text-light shadow-xl z-50"
+    ? "navbar fixed bg-main text-dark shadow-xl z-50"
     : "navbar fixed bg-transparant text-light";
 
   return (
     <div className={navbarClasses}>
       <div className="flex-1">
-        <Link href={"/"} className="btn btn-ghost normal-case text-xl">
+        <Link
+          href={"/"}
+          className="btn btn-ghost hover:scale-110 hover:bg-light/30 normal-case text-xl"
+        >
           EKSIX
         </Link>
       </div>
@@ -54,7 +57,7 @@ function Navbar() {
           <ul className="menu menu-horizontal px-1" key={item.id}>
             <Link
               href={item.url}
-              className="btn btn-ghost normal-case text-lg hover:text-main hover:scale-110"
+              className="btn btn-ghost normal-case text-lg hover:scale-110 hover:bg-light/30"
             >
               {item.title}
             </Link>
