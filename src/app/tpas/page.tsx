@@ -71,7 +71,7 @@ function Aspirasi() {
                   <>
                     Nama: {item.name}
                     <br />
-                    Aspirasi: {item.aspiration}
+                    Pesan: {item.aspiration}
                     <br />
                     Waktu: {item.timestamp && formatTimestamp(item.timestamp)}
                   </>
@@ -85,21 +85,30 @@ function Aspirasi() {
           onSubmit={handleSubmit}
         >
           <div className="mb-4 w-full">
-            <label className="text-lg text-heading-100">Nama</label>
+            <label className="label">
+              <span className="label-text text-lg text-heading-100">Nama</span>
+              <span className="label-text-alt text-paragraph-100">
+                [opsional]
+              </span>
+            </label>
             <input
               type="text"
-              name="nama"
+              name="name"
               id="name"
-              className="input input-bordered input-ghost focus:border-main bg-transparent w-full"
+              className="input input-bordered input-ghost focus:border-main bg-transparent w-full text-paragraph-100"
             />
           </div>
           <div className="mb-4 w-full">
-            <label className="text-lg text-heading-100">Aspirasi</label>
+            <label className="label">
+              {" "}
+              <span className="label-text text-lg text-heading-100">Pesan</span>
+            </label>
 
             <textarea
-              className="textarea textarea-ghost textarea-bordered focus:border-main bg-transparent h-24 w-full"
-              name="aspirasi"
-              id="aspirasi"
+              className="textarea textarea-ghost textarea-bordered focus:border-main bg-transparent h-24 w-full text-paragraph-100"
+              name="message"
+              id="message"
+              required
             ></textarea>
           </div>
           <div className="mt-6 w-full m-auto text-center">

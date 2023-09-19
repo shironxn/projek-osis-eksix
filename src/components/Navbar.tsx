@@ -6,11 +6,6 @@ import Link from "next/link";
 const navbarList = [
   {
     id: 1,
-    title: "HOME",
-    url: "/",
-  },
-  {
-    id: 2,
     title: "TPAS",
     url: "/tpas",
   },

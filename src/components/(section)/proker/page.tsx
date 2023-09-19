@@ -49,7 +49,7 @@ function Proker() {
 
                 <label
                   htmlFor={item.title}
-                  className="btn hover:bg-yellow-400 bg-main text-dark hover:scale-110"
+                  className="btn hover:bg-light/30 bg-main text-dark hover:scale-110"
                 >
                   Details
                 </label>
