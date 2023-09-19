@@ -45,7 +45,9 @@ function Galeri() {
         className="lg:w-1/4 w-full h-screen flex flex-col items-center justify-center"
         data-aos="fade-up"
       >
-        <h1 className="text-5xl font-bold text-center my-20 text-main">News</h1>
+        <h1 className="text-4xl md:text-6xl font-bold text-center my-20 text-main">
+          News
+        </h1>
         <Carousel>
           {imagesNews.map((item) => (
             <Image
@@ -64,7 +66,7 @@ function Galeri() {
         className="lg:w-1/4 w-full h-screen flex flex-col items-center justify-center"
         data-aos="fade-up"
       >
-        <h1 className="text-5xl font-bold text-center my-20 text-main">
+        <h1 className="text-4xl md:text-6xl font-bold text-center my-20 text-main">
           Galeri
         </h1>
         <Carousel>

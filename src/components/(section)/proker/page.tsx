@@ -3,14 +3,24 @@ import Image from "next/image";
 
 const proker = [
   {
-    img: "",
+    id: 1,
+    img: "/images/tpas.svg",
     title: "TPAS (Tempat Penyaluran Aspirasi Siswa)",
-    desc: "Kita menggunakan web sebagai media untuk TPAS agar siswa/i dapat menyalurkan aspirasi, kritik, dan saran, bisa dengan identitas maupun tanpa identitas (anonymous). TPAS ini bisa membantu OSIS untuk berkembang kedepannya (bertujuan untuk mengevaluasi kinerja).",
+    desc: {
+      short:
+        "Kami menggunakan situs web sebagai platform untuk Tempat Pengumpulan Aspirasi dan Saran (TPAS)",
+      long: "Kami telah memilih menggunakan situs web sebagai media utama untuk Tempat Pengumpulan Aspirasi dan Saran (TPAS). Alasan utama adalah agar siswa memiliki wadah yang mudah diakses dan terbuka untuk menyalurkan aspirasi mereka, menyampaikan kritik yang membangun, serta memberikan saran yang konstruktif terkait berbagai aspek kehidupan sekolah. Melalui platform ini, siswa dapat berpartisipasi aktif dalam menyampaikan masukan mereka tanpa rasa takut atau hambatan, baik dengan mencantumkan identitas mereka atau memilih untuk tetap anonim. Salah satu tujuan utama dari TPAS ini adalah untuk menjadi landasan penting dalam merancang strategi dan program ke depan yang lebih efektif dan sesuai dengan kebutuhan serta harapan seluruh siswa.",
+    },
   },
   {
-    img: "",
+    id: 2,
+    img: "/images/cfd.svg",
     title: "CheerFul Day (CFD)",
-    desc: "Dimana hari bahwa siswa menuangkan minat dan bakat ke kreativitas-an nya pada hari tertentu, satu hari full melakukan rangkaian kegiatan acara seru seruan yang diadakan oleh kita, yang bertujuan agar siswa dapat menyalurkan kreativitas nya dihari tersebut dan semakin mengeratkan hubungan masyarakat SMAN 48 Jakarta.",
+    desc: {
+      short:
+        "Kami menyelenggarakan hari di mana siswa dapat menyalurkan minat dan bakat kreatif mereka melalui rangkaian kegiatan seru yang kami selenggarakan.",
+      long: "Hari dimana siswa dapat menuangkan minat dan bakat serta kreativitas-an nya pada hari tertentu, satu hari full melakukan rangkaian kegiatan acara seru seruan yang diadakan oleh kita, yang bertujuan agar siswa dapat menyalurkan kreativitas nya dihari tersebut dan semakin mengeratkan hubungan masyarakat SMAN 48 Jakarta.",
+    },
   },
 ];
 
@@ -18,26 +28,59 @@ function Proker() {
   return (
     <section className="min-h-screen flex flex-col items-center justify-center p-5 bg-light">
       <div className="lg:w-1/2" data-aos="fade-up">
-        <h1 className="text-6xl font-bold text-center mb-8 text-main">
+        <h1 className="text-4xl md:text-6xl font-bold text-center mb-8 text-main">
           Program Kerja
         </h1>
       </div>
 
       <div className="flex flex-wrap justify-center gap-10" data-aos="fade-up">
-        {proker.map((item, i) => (
-          <div className="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/4" key={i}>
-            <div className="bg-dark rounded-lg p-4 shadow-xl">
-              <figure className="text-center">
-                <Image src={item.img} width={300} height={300} alt=""></Image>
-              </figure>
+        {proker.map((item) => (
+          <div className="w-full md:w-1/2 lg:w-1/3" key={item.id}>
+            <div className="bg-dark rounded-lg p-4 shadow-xl w-full h-full flex flex-col justify-between">
+              <div className="flex justify-center mb-4">
+                <Image src={item.img} width={500} height={500} alt="" />
+              </div>
 
-              <div className="text-center">
-                <h2 className="text-xl font-bold mb-2 text-heading-100">
-                  {item.title}
-                </h2>
+              <div className="card-body items-center text-center">
+                <h2 className="card-title text-heading-100">{item.title}</h2>
                 <p className="text-paragraph-100 leading-8 text-justify">
-                  {item.desc}
+                  {item.desc.short}
                 </p>
+
+                <label
+                  htmlFor={item.title}
+                  className="btn hover:bg-yellow-400 bg-main text-dark hover:scale-110"
+                >
+                  Details
+                </label>
+
+                <input
+                  type="checkbox"
+                  id={item.title}
+                  className="modal-toggle"
+                />
+                <div className="modal">
+                  <div className="modal-box bg-dark text-paragraph-100">
+                    <h3 className="font-bold text-lg">{item.title}</h3>
+                    <p className="py-4 text-justify">{item.desc.long}</p>
+                    <div className="modal-action">
+                      <label
+                        htmlFor={item.title}
+                        className="btn hover:scale-110"
+                      >
+                        Close
+                      </label>
+                      {item.id === 1 && (
+                        <label
+                          htmlFor={item.title}
+                          className="btn bg-main text-dark hover:bg-yellow-400 hover:scale-110"
+                        >
+                          TPAS
+                        </label>
+                      )}
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

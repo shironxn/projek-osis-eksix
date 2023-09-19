@@ -9,6 +9,11 @@ const navbarList = [
     title: "HOME",
     url: "/",
   },
+  {
+    id: 2,
+    title: "TPAS",
+    url: "/tpas",
+  },
 ];
 
 function Navbar() {
@@ -34,7 +39,7 @@ function Navbar() {
   }, []);
 
   const navbarClasses = isNavbarBlurred
-    ? "navbar fixed bg-main text-dark shadow-xl z-50"
+    ? "navbar fixed bg-dark text-light shadow-xl z-50"
     : "navbar fixed bg-transparant text-light";
 
   return (
@@ -47,7 +52,10 @@ function Navbar() {
       <div className="flex-none">
         {navbarList.map((item) => (
           <ul className="menu menu-horizontal px-1" key={item.id}>
-            <Link href={item.url} className="btn btn-ghost normal-case text-lg">
+            <Link
+              href={item.url}
+              className="btn btn-ghost normal-case text-lg hover:text-main hover:scale-110"
+            >
               {item.title}
             </Link>
           </ul>

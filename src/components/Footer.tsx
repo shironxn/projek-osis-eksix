@@ -6,12 +6,7 @@ function Footer() {
     <div>
       <footer className="footer footer-center items-center p-4 bg-dark/10 text-paragraph-100 first-letter">
         <aside className="items-center grid-flow-row">
-          <p className="mb-5">
-            Copyright © 2023 -{" "}
-            <Link href={"https://instagram.com/shironxn"} className="underline">
-              shironxn
-            </Link>
-          </p>
+          <p className="mb-5">Copyright © 2023 - shironxn</p>
           <p>Social Media</p>
           <Link href={"https://www.instagram.com/xsixs.jpg/"}>
             <svg

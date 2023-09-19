@@ -1,7 +1,7 @@
 interface dataTPAS {
   name: string;
-  aspirasi: string;
-  timestamp?: object;
+  aspiration: string;
+  timestamp?: number | null;
 }
 
 export default dataTPAS;
