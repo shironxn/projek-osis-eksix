@@ -20,10 +20,10 @@ function Aspirasi() {
   const handleSubmit = async (e: any) => {
     e.preventDefault();
 
-    const { nama, aspirasi } = e.target;
+    const { name, message } = e.target;
     const requestData: dataTPAS = {
-      name: nama.value,
-      aspiration: aspirasi.value,
+      name: name.value,
+      message: message.value,
     };
 
     try {
@@ -63,7 +63,7 @@ function Aspirasi() {
           </h1>
         </div>
 
-        <div className="w-full md:w-1/2 h-64 overflow-y-scroll bg-base-300 rounded-lg text-left text- xl mb-4 p-4 space-y-5">
+        <div className="w-full md:w-1/2 h-64 overflow-y-scroll bg-base-300 rounded-lg text-left text- xl mb-6 p-4 space-y-5">
           {Array.isArray(tpasData) &&
             tpasData.map((item: dataTPAS, i: number) => (
               <div className="w-full rounded-md bg-dark p-5" key={i}>
@@ -71,7 +71,7 @@ function Aspirasi() {
                   <>
                     Nama: {item.name}
                     <br />
-                    Pesan: {item.aspiration}
+                    Pesan: {item.message}
                     <br />
                     Waktu: {item.timestamp && formatTimestamp(item.timestamp)}
                   </>
@@ -84,7 +84,7 @@ function Aspirasi() {
           className="w-full md:w-1/2 flex flex-col items-center justify-center"
           onSubmit={handleSubmit}
         >
-          <div className="mb-4 w-full">
+          <div className="mb-6 w-full">
             <label className="label">
               <span className="label-text text-lg text-heading-100">Nama</span>
               <span className="label-text-alt text-paragraph-100">
@@ -98,7 +98,7 @@ function Aspirasi() {
               className="input input-bordered input-ghost focus:border-main bg-transparent w-full text-paragraph-100"
             />
           </div>
-          <div className="mb-4 w-full">
+          <div className="mb-6 w-full">
             <label className="label">
               {" "}
               <span className="label-text text-lg text-heading-100">Pesan</span>
@@ -111,7 +111,7 @@ function Aspirasi() {
               required
             ></textarea>
           </div>
-          <div className="mt-6 w-full m-auto text-center">
+          <div className="mb-6 w-full m-auto text-center">
             <button className="btn btn-ghost hover:bg-yellow-500 bg-main text-dark w-full">
               Kirim
             </button>

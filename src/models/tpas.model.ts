@@ -3,13 +3,13 @@ import { set, ref, push, serverTimestamp, onValue } from "firebase/database";
 import dataTPAS from "@/types/tpas.type";
 
 class TPAS implements dataTPAS {
-  name: string;
-  aspiration: string;
+  name;
+  message;
   timestamp: number | null;
 
   constructor(data: dataTPAS) {
-    this.name = data.name;
-    this.aspiration = data.aspiration;
+    data.name !== "" ? (this.name = data.name) : (this.name = "Anonymous");
+    this.message = data.message;
     this.timestamp = null;
   }
 

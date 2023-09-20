@@ -1,6 +1,6 @@
 interface dataTPAS {
-  name: string;
-  aspiration: string;
+  name?: string;
+  message: string;
   timestamp?: number | null;
 }
 
