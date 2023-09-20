@@ -41,14 +41,14 @@ const imagesNews = [
 function Galeri() {
   return (
     <section className="min-h-screen flex flex-col lg:flex-row items-center justify-center gap-10 bg-dark">
-      <div
-        className="lg:w-1/4 w-full h-screen flex flex-col items-center justify-center"
-        data-aos="fade-up"
-      >
-        <h1 className="text-4xl md:text-6xl font-bold text-center my-20 text-main">
+      <div className="lg:w-1/4 w-full h-screen flex flex-col items-center justify-center">
+        <h1
+          data-aos="fade-up"
+          className="text-4xl md:text-6xl font-bold text-center my-20 text-main"
+        >
           News
         </h1>
-        <Carousel>
+        <Carousel data-aos="fade-up">
           {imagesNews.map((item) => (
             <Image
               src={item.img}
@@ -62,14 +62,14 @@ function Galeri() {
         </Carousel>
       </div>
 
-      <div
-        className="lg:w-1/4 w-full h-screen flex flex-col items-center justify-center"
-        data-aos="fade-up"
-      >
-        <h1 className="text-4xl md:text-6xl font-bold text-center my-20 text-main">
+      <div className="lg:w-1/4 w-full h-screen flex flex-col items-center justify-center">
+        <h1
+          data-aos="fade-up"
+          className="text-4xl md:text-6xl font-bold text-center my-20 text-main"
+        >
           Galeri
         </h1>
-        <Carousel>
+        <Carousel data-aos="fade-up">
           {imagesGaleri.map((item) => (
             <Image
               src={item.img}

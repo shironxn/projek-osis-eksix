@@ -3,14 +3,14 @@ import React from "react";
 function VisiMisi() {
   return (
     <section className="min-h-screen flex flex-col lg:flex-row items-center justify-center p-5 bg-dark">
-      <div
-        className="lg:w-1/2 flex flex-col text-paragraph-200"
-        data-aos="fade-up"
-      >
-        <div className="text-4xl font-bold mb-4 text-center lg:text-left text-main">
+      <div className="lg:w-1/2 flex flex-col text-paragraph-200">
+        <div
+          data-aos="fade-up"
+          className="text-4xl font-bold mb-4 text-center lg:text-left text-main"
+        >
           Visi
         </div>
-        <div className="bg-light rounded-md p-5">
+        <div data-aos="fade-up" className="bg-light rounded-md p-5">
           <p className="text-md leading-8 text-justify text-paragraph-200">
             Mewujudkan SMA Negeri 48 Jakarta menjadi sekolah yang unggul dan
             menjadikan para siswa/i menjadi siswa/i yang berprestasi, kreatif,
@@ -18,7 +18,10 @@ function VisiMisi() {
             berakhlak mulia dan taat pada norma-norma Pancasila.
           </p>
         </div>
-        <div className="mt-6 text-4xl font-bold mb-4 text-center lg:text-left text-main">
+        <div
+          data-aos="fade-up"
+          className="mt-6 text-4xl font-bold mb-4 text-center lg:text-left text-main"
+        >
           Misi
         </div>
         <div

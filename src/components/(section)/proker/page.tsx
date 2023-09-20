@@ -34,9 +34,13 @@ function Proker() {
         </h1>
       </div>
 
-      <div className="flex flex-wrap justify-center gap-10" data-aos="fade-up">
+      <div className="flex flex-wrap justify-center gap-10">
         {proker.map((item) => (
-          <div className="w-full md:w-1/2 lg:w-1/3" key={item.id}>
+          <div
+            className="w-full md:w-1/2 lg:w-1/3"
+            data-aos="fade-up"
+            key={item.id}
+          >
             <div className="bg-dark rounded-lg p-4 shadow-xl w-full h-full flex flex-col justify-between">
               <div className="flex justify-center mb-4">
                 <Image src={item.img} width={500} height={500} alt="" />
