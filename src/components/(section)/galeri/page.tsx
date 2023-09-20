@@ -40,8 +40,8 @@ const imagesNews = [
 
 function Galeri() {
   return (
-    <section className="min-h-screen flex flex-col lg:flex-row items-center justify-center gap-10 bg-dark">
-      <div className="lg:w-1/4 w-full h-screen flex flex-col items-center justify-center">
+    <section className="min-h-screen flex flex-col md:flex-row items-center justify-center gap-10 bg-dark">
+      <div className="md:w-1/4 w-full h-screen flex flex-col items-center justify-center">
         <h1
           data-aos="fade-up"
           className="text-4xl md:text-6xl font-bold text-center my-20 text-main"
@@ -62,7 +62,7 @@ function Galeri() {
         </Carousel>
       </div>
 
-      <div className="lg:w-1/4 w-full h-screen flex flex-col items-center justify-center">
+      <div className="md:w-1/4 w-full h-screen flex flex-col items-center justify-center">
         <h1
           data-aos="fade-up"
           className="text-4xl md:text-6xl font-bold text-center my-20 text-main"
