@@ -1,6 +1,7 @@
+import dataTPAS from "@/types/tpas.type";
 import axios from "axios";
 
-async function validateToken(token: string) {
+export async function validateToken(token: string) {
   try {
     const response = await axios.post(
       "https://www.google.com/recaptcha/api/siteverify",
@@ -21,4 +22,12 @@ async function validateToken(token: string) {
   }
 }
 
-export default validateToken;
+export function validateDataTPAS(data: dataTPAS): string[] {
+  const errors: string[] = [];
+
+  if (!data.message || data.message.trim() === "") {
+    errors.push("Message is Required");
+  }
+
+  return errors;
+}

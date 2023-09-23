@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import TPAS from "@/models/tpas.model";
 import dataTPAS from "@/types/tpas.type";
-import validateDataTPAS from "@/utils/data.validate";
+import { validateDataTPAS } from "@/utils/validation.util";
 import { cookies } from "next/headers";
 
 async function handlePostRequest(request: NextRequest) {
