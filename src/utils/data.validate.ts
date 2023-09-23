@@ -1,6 +1,6 @@
 import dataTPAS from "@/types/tpas.type";
 
-export function validateDataTPAS(data: dataTPAS): string[] {
+function validateDataTPAS(data: dataTPAS): string[] {
   const errors: string[] = [];
 
   if (!data.message || data.message.trim() === "") {
@@ -9,3 +9,5 @@ export function validateDataTPAS(data: dataTPAS): string[] {
 
   return errors;
 }
+
+export default validateDataTPAS;

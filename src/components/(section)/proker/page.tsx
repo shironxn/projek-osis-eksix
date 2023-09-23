@@ -10,7 +10,7 @@ const proker = [
     desc: {
       short:
         "Kami menggunakan situs web sebagai platform untuk Tempat Pengumpulan Aspirasi dan Saran (TPAS)",
-      long: "Kami telah memilih menggunakan situs web sebagai media utama untuk Tempat Pengumpulan Aspirasi dan Saran (TPAS). Alasan utama adalah agar siswa memiliki wadah yang mudah diakses dan terbuka untuk menyalurkan aspirasi mereka, menyampaikan kritik yang membangun, serta memberikan saran yang konstruktif terkait berbagai aspek kehidupan sekolah. Melalui platform ini, siswa dapat berpartisipasi aktif dalam menyampaikan masukan mereka tanpa rasa takut atau hambatan, baik dengan mencantumkan identitas mereka atau memilih untuk tetap anonim. Salah satu tujuan utama dari TPAS ini adalah untuk menjadi landasan penting dalam merancang strategi dan program ke depan yang lebih efektif dan sesuai dengan kebutuhan serta harapan seluruh siswa.",
+      long: "Kami memilih situs web sebagai wadah utama untuk Tempat Pengumpulan Aspirasi dan Saran (TPAS) agar siswa dapat dengan mudah menyampaikan aspirasi, kritik, dan saran terkait kehidupan sekolah. Platform ini memungkinkan partisipasi aktif tanpa rasa takut, baik secara terbuka maupun anonim. Tujuan utama TPAS adalah menjadi dasar untuk merancang program yang lebih efektif dan sesuai dengan harapan siswa.",
     },
   },
   {

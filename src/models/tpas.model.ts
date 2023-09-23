@@ -1,14 +1,14 @@
-import FirebaseConfig from "@/firebase/firebase.config";
 import { set, ref, push, serverTimestamp, onValue } from "firebase/database";
+import FirebaseConfig from "@/firebase/firebase.config";
 import dataTPAS from "@/types/tpas.type";
 
 class TPAS implements dataTPAS {
-  name;
-  message;
+  name?: string;
+  message: string;
   timestamp: number | null;
 
   constructor(data: dataTPAS) {
-    data.name !== "" ? (this.name = data.name) : (this.name = "Anonymous");
+    this.name = data.name !== "" ? data.name : "Anonymous";
     this.message = data.message;
     this.timestamp = null;
   }
@@ -25,19 +25,19 @@ class TPAS implements dataTPAS {
             resolve(data);
           },
           (error) => {
-            reject(new Error("Error Getting Data"));
+            reject(new Error("Error getting data"));
           }
         );
       });
     } catch (error) {
-      throw new Error("Error Getting Data");
+      console.error("Error getting data:", error);
+      throw new Error("Error getting data");
     }
   }
 
   async sendData(): Promise<any> {
     try {
       const dataRef = push(ref(FirebaseConfig(), "TPAS"));
-
       const newKey = dataRef.key;
 
       await set(dataRef, {
@@ -54,7 +54,8 @@ class TPAS implements dataTPAS {
         return dataRefWithKey;
       }
     } catch (error) {
-      throw new Error("Error Sending Data:");
+      console.error("Error sending data:", error);
+      throw new Error("Error sending data");
     }
   }
 }
