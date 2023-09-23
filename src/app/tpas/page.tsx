@@ -55,7 +55,7 @@ function Tpas() {
             </div>
 
             <div
-              className="w-full md:w-1/2 h-64 overflow-y-scroll bg-base-300 rounded-lg text-left text- xl mb-6 p-4 space-y-5"
+              className="w-full md:w-1/2 h-64 overflow-y-scroll bg-base-100 rounded-lg text-left text- xl mb-6 p-4 space-y-5"
               data-aos="fade-up"
             >
               {typeof tpasData === "string" ? (

@@ -26,7 +26,7 @@ const logoList = [
 function Footer() {
   return (
     <div>
-      <footer className="footer footer-center items-center p-5 bg-dark/10 text-paragraph-100 first-letter">
+      <footer className="footer footer-center items-center p-5 bg-base-100 text-paragraph-100 first-letter">
         <aside className="items-center grid-flow-row">
           <p className="mb-5">Copyright © 2023 - shironxn</p>
           <h1 className="text-lg font-bold">Social Media</h1>
