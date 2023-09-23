@@ -10,6 +10,16 @@ async function handlePostRequest(request: NextRequest) {
     const dataJSON = await request.json();
     const { data, token }: { data: dataTPAS; token: string } = dataJSON;
 
+    if (!token) {
+      return NextResponse.json(
+        {
+          success: false,
+          errors: "Token is missing",
+        },
+        { status: 400 }
+      );
+    }
+
     if (cookieStore.get("captchaToken")) {
       return NextResponse.json(
         {
