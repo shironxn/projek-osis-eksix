@@ -8,8 +8,8 @@ class TPAS implements dataTPAS {
   timestamp: number | null;
 
   constructor(data: dataTPAS) {
-    this.name = data.name !== "" ? data.name : "Anonymous";
-    this.message = data.message;
+    this.name = data?.name !== "" ? data.name : "Anonymous";
+    this.message = data?.message;
     this.timestamp = null;
   }
 
@@ -37,18 +37,20 @@ class TPAS implements dataTPAS {
 
   async sendData(): Promise<any> {
     try {
+      const dataToSend = {
+        name: this.name,
+        message: this.message,
+        timestamp: serverTimestamp(),
+      };
+
       const dataRef = push(ref(FirebaseConfig(), "TPAS"));
       const newKey = dataRef.key;
 
-      await set(dataRef, {
-        ...this,
-        timestamp: serverTimestamp(),
-      });
+      await set(dataRef, dataToSend);
 
       if (newKey) {
         const dataRefWithKey = {
-          ...this,
-          timestamp: serverTimestamp(),
+          ...dataToSend,
           key: newKey,
         };
         return dataRefWithKey;
